@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编写位置</title>
+    <!-- 1. 可以将 js 编写到网页内部的 script 标签中 -->
+    <!-- <script>alert('script 标签中的 js')</script> -->
+
+    <!-- 2. 可以将 js 编写到外部的 js 文件中，然后通过 script 标签引入
+        script 标签中使用了 src 属性引入外部 js 文件后，不建议在该 script 标签中继续编写其他 js，可以重新定义一个 script 标签 
+    -->
+    <!-- <script src="./script/default.js"></script> -->
+</head>
+
+<body>
+    <!-- 3. 可以将 js 代码编写到指定属性中 -->
+    <button onclick="alert('你点我干嘛！')">点我一下</button>
+    <hr>
+
+    <a href="javascript:alert('123');">超链接</a>
+    <hr>
+
+    <!-- 此超链接什么都不做 -->
+    <a href="javascript:;">超链接2</a>
+</body>
+
+</html>
