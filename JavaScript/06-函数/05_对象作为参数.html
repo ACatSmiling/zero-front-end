@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>对象作为参数</title>
     <script>
-        function fn(a){
-            // console.log("a =", a)
-            // console.log(a.name)
+        function fn(a) {
+            console.log("a = ", a.name)
 
-            // a = {} // 修改变量时，只会影响当前的变量
+            // a = {} // 如果重新定义了 a，则修改变量时，只会影响当前的变量
             a.name = "猪八戒" // 修改对象时，如果有其他变量指向该对象则所有指向该对象的变量都会受到影响
-            console.log(a)
-            
+            console.log("a = ", a.name)
         }
 
         // 对象可以作为参数传递
-        let obj = {name:"孙悟空"}
+        let obj = { name: "孙悟空" }
 
         // 传递实参时，传递并不是变量本身，而是变量中存储的值
-        // fn(obj)
+        fn(obj) // 孙悟空 猪八戒
 
-        // console.log(obj)
+        // 可以放开 fn 中对变量 a 的重新定义的注释，查看 obj 的变化
+        console.log("obj = ", obj.name)
 
-        let obj2 = {name:"沙和尚"}
-        
+        let obj2 = { name: "沙和尚" }
+
         // 函数每次调用，都会重新创建默认值
-        function fn2(a = {name:"沙和尚"}){
-            console.log("a =", a)
+        function fn2(a = { name: "沙和尚" }) {
+            console.log("a = ", a.name)
             a.name = "唐僧"
-            console.log("a =", a)
+            console.log("a = ", a.name)
         }
 
         fn2() // 沙和尚 唐僧
-        fn2() // 沙和尚 唐僧 or 唐僧 唐僧
-
+        fn2() // 沙和尚 唐僧
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

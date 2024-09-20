@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>函数的作用域</title>
     <script>
         /* 
             函数作用域
@@ -14,20 +15,19 @@
                 - 在函数中定义的变量是局部变量，只能在函数内部访问，外部无法访问
         */
 
-        function fn(){
+        function fn() {
             let a = "fn中的变量a"
-
             console.log(a)
         }
 
-        fn()
+        fn() // 调用函数，正常输出 "fn中的变量a"
 
-        console.log(a)
-        
-
+        console.log(a) // Uncaught ReferenceError: a is not defined
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>立即执行函数</title>
     <script>
 
         /* 
@@ -43,13 +44,13 @@
                 - 立即是一个匿名的函数，并它只会调用一次
                 - 可以利用IIFE来创建一个一次性的函数作用域，避免变量冲突的问题
         */
-        (function(){
+        (function () {
             let a = 10
             console.log(111)
         }());
 
 
-        (function(){
+        (function () {
             let a = 20
             console.log(222)
         }())
@@ -58,7 +59,9 @@
 
     </script>
 </head>
+
 <body>
     div
 </body>
+
 </html>
